@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>appId</key>
+	<string>408872716</string>
+	<key>title</key>
+	<string>E-TVA: Votez sur App-Store!</string>
+	<key>message</key>
+	<string>Donnez votre avis sur App-Store et nous pourrons au mieux améliorer cette application.</string>
+	<key>confirmLabel</key>
+	<string>Oui, je vote!</string>
+	<key>cancelLabel</key>
+	<string>Plus tard</string>
+	<key>invalidateLabel</key>
+	<string>Non, ne me demandez plus</string>
+</dict>
+</plist>
