@@ -30,7 +30,6 @@
 
 #pragma mark calculator
 - (void)addMutableNumber:(NSString*)number{
-	NSLog(@"--> %@", _computeValue);
 	[self set_computeValue: [_computeValue stringByAppendingString:number]];
 	[self			setDisplayValue: [NSString stringWithString:_computeValue]];
 }
@@ -49,7 +48,9 @@
 									case CLMINUS:		[self minus];		break;
 									case CLMULTIPLY:	[self multiply];	break;
 									case CLDIVIDE:		[self divide];		break;
+                                    default: break;
 							}
+        default: break;
 	}
 	
 	redoAction = lastAction;
