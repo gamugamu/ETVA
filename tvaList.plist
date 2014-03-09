@@ -3,7 +3,8 @@
 <plist version="1.0">
 <array>
 	<real>5.5</real>
-	<real>19.6</real>
+	<integer>20</integer>
+	<integer>7</integer>
 	<real>2.1</real>
 </array>
 </plist>
