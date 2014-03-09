@@ -35,6 +35,10 @@
 	<true/>
 	<key>UIPrerenderedIcon</key>
 	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UIStatusBarHidden</key>
 	<true/>
 </dict>

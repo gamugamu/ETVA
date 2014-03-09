@@ -28,7 +28,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self tvaControllerDependingOnIphoneSreenHeightSize];
 	[self transition: viewController.view];
-	[self.window addSubview: viewController.view];
+	[self.window setRootViewController: viewController];
     [self.window makeKeyAndVisible];
 
 	[RateMe displayReviewMe: [GGarchiver unarchiveData: @"ReviewMe"]];
@@ -38,10 +38,11 @@
 
 - (void)transition:(UIView*)view{
 	view.alpha = 0;
-	[UIView animateWithDuration:.5 animations:^(void) {view.alpha = 1;}];
+	[UIView animateWithDuration:.5
+                     animations: ^(void) {view.alpha = 1;}];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)applicationDidEnterBackground:(UIApplication *)application{
 	[viewController applicationDidEnterBackground: application];
 }
 
@@ -54,12 +55,12 @@
     [super dealloc];
 }
 
-#pragma mark -
+#pragma mark - display
 
 - (void)tvaControllerDependingOnIphoneSreenHeightSize{
     self.viewController = [[TVAViewController alloc] initWithNibName:
                            IS_IPHONE_5? @"TVAViewController-568h" : @"TVAViewController"
                                                               bundle: nil];
-    NSLog(@"---> %u", IS_IPHONE_5);
 }
+
 @end
