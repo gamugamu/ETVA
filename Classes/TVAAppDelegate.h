@@ -12,11 +12,9 @@
 
 @interface TVAAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    TVAViewController *viewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet TVAViewController *viewController;
 
 @end
 

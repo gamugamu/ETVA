@@ -14,6 +14,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* TVAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TVAViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		29C7682418CCB8590099A5B6 /* TVAViewController-568h.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C7682318CCB8590099A5B6 /* TVAViewController-568h.xib */; };
+		29C7686A18CCBC1A0099A5B6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C7686918CCBC1A0099A5B6 /* Default-568h@2x.png */; };
 		79215AE612A7F99300AE3D8B /* imht.png in Resources */ = {isa = PBXBuildFile; fileRef = 79215AE412A7F99300AE3D8B /* imht.png */; };
 		79215AE712A7F99300AE3D8B /* imTtc.png in Resources */ = {isa = PBXBuildFile; fileRef = 79215AE512A7F99300AE3D8B /* imTtc.png */; };
 		79215BC812A807C900AE3D8B /* MiniCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79215BC712A807C900AE3D8B /* MiniCalculator.m */; };
@@ -120,6 +122,9 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* TVAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVAViewController.h; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29C7682218CCB6240099A5B6 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		29C7682318CCB8590099A5B6 /* TVAViewController-568h.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TVAViewController-568h.xib"; sourceTree = "<group>"; };
+		29C7686918CCBC1A0099A5B6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TVA_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVA_Prefix.pch; sourceTree = "<group>"; };
 		79215AE412A7F99300AE3D8B /* imht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imht.png; sourceTree = "<group>"; };
 		79215AE512A7F99300AE3D8B /* imTtc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imTtc.png; sourceTree = "<group>"; };
@@ -288,6 +293,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29C7682318CCB8590099A5B6 /* TVAViewController-568h.xib */,
 				2899E5210DE3E06400AC0155 /* TVAViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TVA-Info.plist */,
@@ -354,6 +360,7 @@
 				79FD3D7B12AD41A200E8A30E /* Color */,
 				79BA955B12A66C9C00C34F47 /* IButton.h */,
 				79BA955C12A66C9C00C34F47 /* IButton.m */,
+				29C7682218CCB6240099A5B6 /* Utils.h */,
 			);
 			name = utilities;
 			sourceTree = "<group>";
@@ -391,6 +398,7 @@
 		79FD3B9A12AD2B7B00E8A30E /* btn */ = {
 			isa = PBXGroup;
 			children = (
+				29C7686918CCBC1A0099A5B6 /* Default-568h@2x.png */,
 				79A1F8F512BBE0C500C4112E /* miniBtnRcpE.png */,
 				79A1F8F612BBE0C500C4112E /* miniBtnRcpE@2x.png */,
 				79A1F8F712BBE0C500C4112E /* miniBtnRcpF.png */,
@@ -604,6 +612,7 @@
 				79FD3BA912AD2BA300E8A30E /* supbkg.png in Resources */,
 				79FD3C7F12AD2CF300E8A30E /* input.png in Resources */,
 				79FD3C8012AD2CF300E8A30E /* input@2x.png in Resources */,
+				29C7686A18CCBC1A0099A5B6 /* Default-568h@2x.png in Resources */,
 				79FD3C8712AD2DFD00E8A30E /* addTva.png in Resources */,
 				79FD3C8812AD2DFD00E8A30E /* addTva@2x.png in Resources */,
 				79FD3C8B12AD2DFD00E8A30E /* logo.png in Resources */,
@@ -643,6 +652,7 @@
 				79A1F79312BBC75D00C4112E /* ReviewMe.plist in Resources */,
 				79A1F8F912BBE0C500C4112E /* miniBtnRcpE.png in Resources */,
 				79A1F8FA12BBE0C500C4112E /* miniBtnRcpE@2x.png in Resources */,
+				29C7682418CCB8590099A5B6 /* TVAViewController-568h.xib in Resources */,
 				79A1F8FB12BBE0C500C4112E /* miniBtnRcpF.png in Resources */,
 				79A1F8FC12BBE0C500C4112E /* miniBtnRcpF@2x.png in Resources */,
 			);

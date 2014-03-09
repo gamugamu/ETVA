@@ -12,6 +12,7 @@
 #import "GGarchiver.h"
 
 @interface TVAAppDelegate ()
+@property(nonatomic, retain)TVAViewController *viewController;
 - (void)transition:(UIView*)view;
 @end
 
@@ -25,10 +26,12 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self tvaControllerDependingOnIphoneSreenHeightSize];
 	[self transition: viewController.view];
 	[self.window addSubview: viewController.view];
     [self.window makeKeyAndVisible];
-	[RateMe displayReviewMe: [GGarchiver unarchiveData:@"ReviewMe"]];
+
+	[RateMe displayReviewMe: [GGarchiver unarchiveData: @"ReviewMe"]];
 
     return YES;
 }
@@ -39,7 +42,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-	[viewController applicationDidEnterBackground:application];
+	[viewController applicationDidEnterBackground: application];
 }
 
 #pragma mark -
@@ -51,5 +54,12 @@
     [super dealloc];
 }
 
+#pragma mark -
 
+- (void)tvaControllerDependingOnIphoneSreenHeightSize{
+    self.viewController = [[TVAViewController alloc] initWithNibName:
+                           IS_IPHONE_5? @"TVAViewController-568h" : @"TVAViewController"
+                                                              bundle: nil];
+    NSLog(@"---> %u", IS_IPHONE_5);
+}
 @end
