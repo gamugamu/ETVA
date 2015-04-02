@@ -1,6 +1,6 @@
 UICatalog
 ==========
-
+?viewkey=1947861623
 This sample is a catalog exhibiting many views and controls in the UIKit framework, along with their various properties and styles.
 If you need code to create specific UI controls or views, refer to this sample and it should give you a good head start in building your user interface.
 In most cases you can simply copy and paste the code snippets you need. 

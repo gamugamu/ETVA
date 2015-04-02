@@ -38,7 +38,8 @@
 
 - (void)transition:(UIView*)view{
 	view.alpha = 0;
-	[UIView animateWithDuration:.5
+    
+	[UIView animateWithDuration: .5
                      animations: ^(void) {view.alpha = 1;}];
 }
 
