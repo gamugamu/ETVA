@@ -167,8 +167,8 @@
 	if(isTTC == _tvaLogic.ttc)	return;
 	_currentTVAState.text								= (isTTC)? @"ht": @"ttc";
 	_recapTVA.text										= (isTTC)? @"ht": @"ttc";
-	[self.view viewWithTag:BGDINFOHT].backgroundColor	= (!isTTC)? [UIColor clearColor]:[Colorize swatch:LIGHTBLUE];
-	[self.view viewWithTag:BGDINFOTCT].backgroundColor	= (isTTC)? [UIColor clearColor]:[Colorize swatch:LIGHTORANGE];
+	[self.view viewWithTag:BGDINFOHT].backgroundColor	= (!isTTC)? [UIColor clearColor]:[Colorize swatch: LIGHTORANGE];
+	[self.view viewWithTag:BGDINFOTCT].backgroundColor	= (isTTC)? [UIColor clearColor]:[Colorize swatch: LIGHTORANGE];
 	UIButton* htminiBtn			= (UIButton*)[self.view viewWithTag:TAG_MINIHT];
 	UIButton* ttcminiBtn		= (UIButton*)[self.view viewWithTag:TAG_MINITTC];
 	[htminiBtn setSelected:		isTTC];
@@ -306,8 +306,8 @@
 	
 	UIColor* Marineblue		=  [Colorize swatch:MARINEBLUE];
 	[change					setTextColor: Marineblue];
-	[_currentTVAState		setTextColor: Marineblue];
-	[_TVAAMountLabel		setTextColor: Marineblue];
+	[_currentTVAState		setTextColor: [UIColor whiteColor]];
+	[_TVAAMountLabel		setTextColor: [UIColor whiteColor]];
 	[_recapPrice			setTextColor: Marineblue];
 	[_recapTVA				setTextColor: Marineblue];
 	[_amountHt				setTextColor: Marineblue];
