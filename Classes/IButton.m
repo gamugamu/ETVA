@@ -11,14 +11,9 @@
 
 @implementation IButton
 
-- (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-}
-
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
 	[[NSNotificationCenter defaultCenter] postNotificationName:IBUTTONNAME object: [[NSNumber numberWithInteger: [self tag]] stringValue]];
 	return YES;
 }
 
-- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
-}
 @end

@@ -41,7 +41,7 @@ static NSInteger newVat[2];
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 	if(pickerView.tag == PICKERCREATETVATAG){
 		newVat[component]	= row;
-		tvaAddedLabel.text	= [NSString stringWithFormat:@"%u.%.2u%%",newVat[0], newVat[1]];
+		tvaAddedLabel.text	= [NSString stringWithFormat:@"%ld.%.2ld%%", newVat[0], (long)newVat[1]];
 	}
 	
 	else
@@ -56,7 +56,7 @@ static NSInteger newVat[2];
 	
 	if(pickerView.tag == PICKERCREATETVATAG){
 		pRow.font = [UIFont fontWithName:POLICEH4 size:22.f];
-	 	pRow.text = [NSString stringWithFormat:@"%u",row];
+	 	pRow.text = [NSString stringWithFormat:@"%ld",(long)row];
 	}
 	
 	else{
@@ -101,19 +101,20 @@ static NSInteger newVat[2];
 }
 
 - (IBAction)goBack:(id)sender{
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated: YES
+                             completion: nil];
 }
 
 #pragma mark checkLogic
 - (BOOL)authorizeValue:(double)value{
 	__block BOOL authorize = YES;
 	if(!value){
-		[self			callError: [NSString stringWithFormat:@"La taxe ne peut être nulle."]];
-		return authorize		= NO;
+		[self callError: [NSString stringWithFormat:@"La taxe ne peut être nulle."]];
+		return authorize = NO;
 	}
 	else if([addedAmount._tvaList count] >= MAXTVALIST){
-		[self			callError: [NSString stringWithFormat:@"Le nombre maximum de taxes a été atteint: %u.", MAXTVALIST]];
-		return authorize		= NO;
+		[self callError: [NSString stringWithFormat:@"Le nombre maximum de taxes a été atteint: %u.", MAXTVALIST]];
+		return authorize = NO;
 	}
 		
 	[addedAmount._tvaList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -163,7 +164,7 @@ static NSInteger newVat[2];
 	newVat[0]				= 0;
 	newVat[1]				= 0;
 	tvacurrentLabel.text	= [NSString stringWithFormat:@"%@%%", [[addedAmount _tvaList] objectAtIndex: 0]];
-	tvaAddedLabel.text		= [NSString stringWithFormat:@"%u.%.2u%%",newVat[0], newVat[1]];;
+	tvaAddedLabel.text		= [NSString stringWithFormat:@"%ldd.%.2ldd%%",newVat[0], newVat[1]];;
 }
 
 #pragma mark alloc/dealloc

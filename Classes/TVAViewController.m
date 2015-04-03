@@ -64,23 +64,25 @@
 }
 
 - (IBAction)addtvaPressed:(id)sender{
-	tvaAddAmount* addAmount				= [[tvaAddAmount alloc] initWithTvaAmount:_tvaAmount];
-	addAmount.modalTransitionStyle		= UIModalTransitionStyleFlipHorizontal; 
-	[self								presentModalViewController:addAmount animated:YES];
-	[addAmount							release];
+	tvaAddAmount* addAmount				= [[tvaAddAmount alloc] initWithTvaAmount: _tvaAmount];
+	addAmount.modalTransitionStyle		= UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController: addAmount
+                       animated: YES
+                     completion: nil];
+	[addAmount release];
 }
 
 - (IBAction)InfoPressed:(id)sender{
 	_whoIam.alpha = 0;
 	[self.view addSubview: _whoIam];
-	[UIView animateWithDuration:1 
-					 animations:^{_whoIam.alpha = .8;}];
+	[UIView animateWithDuration: 1
+					 animations: ^{ _whoIam.alpha = .8;}];
 }
 
 - (IBAction)InfoDismissPressed:(id)sender{
-	[UIView animateWithDuration:.5f 
-					 animations:^{_whoIam.alpha = 0;} 
-					 completion:^(BOOL finished) {[_whoIam removeFromSuperview];}];
+	[UIView animateWithDuration: .5f
+					 animations: ^{ _whoIam.alpha = 0;}
+					 completion: ^(BOOL finished) {[_whoIam removeFromSuperview];}];
 }
 
 #pragma mark display animation
@@ -224,7 +226,8 @@
 
 - (uint)outputLenght{
 	MUTABLEDISPLAYFORMAT;
-	return [[NSString stringWithFormat:formats[pointPrecision], [_tvaLogic.displayValue doubleValue]] length];
+	return (uint)[[NSString stringWithFormat: formats[pointPrecision],
+             [_tvaLogic.displayValue doubleValue]] length];
 }
 
 #define NULLDISPLAYFORMAT @"0"
@@ -270,7 +273,7 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
 	UILabel* pRow		= [[[UILabel alloc] init] autorelease];
 	pRow.text			=  [NSString stringWithFormat:PRICEFORMATADD, [[[_tvaAmount _tvaList] objectAtIndex:row] doubleValue]];
-	pRow.textAlignment	= UITextAlignmentLeft;
+	pRow.textAlignment	= NSTextAlignmentLeft;
 
 	[pRow			setBackgroundColor: [UIColor clearColor]];
 	[pRow			setFont: [UIFont fontWithName:POLICEH3 size:15.f]];

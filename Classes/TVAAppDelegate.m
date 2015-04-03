@@ -59,8 +59,7 @@
 #pragma mark - display
 
 - (void)tvaControllerDependingOnIphoneSreenHeightSize{
-    self.viewController = [[TVAViewController alloc] initWithNibName:
-                           IS_IPHONE_5? @"TVAViewController-568h" : @"TVAViewController"
+    self.viewController = [[TVAViewController alloc] initWithNibName: @"TVAViewController"
                                                               bundle: nil];
 }
 
