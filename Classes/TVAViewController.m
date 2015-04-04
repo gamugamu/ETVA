@@ -306,16 +306,6 @@
 	[_amountHt				setFont: [UIFont fontWithName:POLICEH2 size:13.f]];
 	[_amountttc				setFont: [UIFont fontWithName:POLICEH2 size:13.f]];
 	[_amounttva				setFont: [UIFont fontWithName:POLICEH2 size:13.f]];
-	
-	UIColor* Marineblue		=  [Colorize swatch:MARINEBLUE];
-	[change					setTextColor: Marineblue];
-	[_currentTVAState		setTextColor: [UIColor whiteColor]];
-	[_TVAAMountLabel		setTextColor: [UIColor whiteColor]];
-	[_recapPrice			setTextColor: Marineblue];
-	[_recapTVA				setTextColor: Marineblue];
-	[_amountHt				setTextColor: Marineblue];
-	[_amountHt				setTextColor: Marineblue];
-	[_amounttva				setTextColor: [UIColor whiteColor]];
 }
 
 - (void)viewDidUnload {
