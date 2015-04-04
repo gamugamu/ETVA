@@ -299,7 +299,7 @@
 	UILabel* change			= (UILabel*)[self.view viewWithTag:60];
 	change.text				= @"€";
 	[change					setFont: [UIFont fontWithName:POLICEH1 size:25.f]];
-	[_currentTVAState		setFont: [UIFont fontWithName:POLICEH1 size:55.f]];
+	[_currentTVAState		setFont: [UIFont fontWithName:POLICEH1 size:45.f]];
 	[_TVAAMountLabel		setFont: [UIFont fontWithName:POLICEH1 size:15.f]];
 	[_recapPrice			setFont: [UIFont fontWithName:POLICEH1 size:45.f]];
 	[_recapTVA				setFont: [UIFont fontWithName:POLICEH1 size:14.f]];

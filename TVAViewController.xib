@@ -27,22 +27,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hr-ql-eat" userLabel="conCalc">
-                    <rect key="frame" x="36" y="97" width="304" height="420"/>
+                    <rect key="frame" x="36" y="108" width="304" height="409"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-8h-8ff" userLabel="container_0">
-                            <rect key="frame" x="0.0" y="0.0" width="304" height="178"/>
+                            <rect key="frame" x="0.0" y="-11" width="304" height="178"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71" userLabel="big button switcher">
-                                    <rect key="frame" x="165" y="78" width="114" height="110"/>
-                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                    <state key="normal">
-                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <state key="selected" backgroundImage="btnHT.png"/>
-                                    <state key="highlighted">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71" userLabel="big button switcher">
+                                    <rect key="frame" x="172" y="75" width="90" height="90"/>
+                                    <state key="normal" image="btn_RND.png"/>
+                                    <state key="selected" image="btn_RND.png"/>
                                     <connections>
                                         <action selector="tvaPressed:" destination="-1" eventType="touchDown" id="85"/>
                                     </connections>
@@ -52,6 +45,10 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-L6-Pnw">
                                             <rect key="frame" x="2" y="12" width="108" height="13"/>
+                                            <color key="backgroundColor" red="1" green="0.46397161599999998" blue="0.53474825150000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4G-3V-IWY">
+                                            <rect key="frame" x="2" y="46" width="108" height="13"/>
                                             <color key="backgroundColor" red="1" green="0.46397161599999998" blue="0.53474825150000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="92" userLabel="price ht label">
@@ -93,12 +90,8 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4G-3V-IWY">
-                                            <rect key="frame" x="2" y="46" width="108" height="13"/>
-                                            <color key="backgroundColor" red="1" green="0.46397161599999998" blue="0.53474825150000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.20216731930000001" green="1" blue="0.91541342410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </view>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="60" contentMode="left" fixedFrame="YES" text="e" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="118">
                                     <rect key="frame" x="257" y="34" width="27" height="17"/>
@@ -112,19 +105,13 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="91" userLabel="tva % label">
-                                    <rect key="frame" x="181" y="153" width="81" height="20"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </label>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4S-oU-1Bx">
                                     <rect key="frame" x="15" y="30" width="238" height="40"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </view>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="ht" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="113">
-                                    <rect key="frame" x="181" y="86" width="80" height="65"/>
-                                    <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="55"/>
+                                    <rect key="frame" x="178" y="78" width="80" height="65"/>
+                                    <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="20"/>
                                     <color key="textColor" white="0.97001008060000005" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </label>
@@ -175,21 +162,27 @@
                                             </state>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.46397161599999998" blue="0.53474825150000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </view>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="91" userLabel="tva % label">
+                                    <rect key="frame" x="187" y="135" width="61" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.2317811021" blue="0.34086484360000002" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qku-KE-ASA">
-                            <rect key="frame" x="80" y="173" width="30" height="17"/>
+                            <rect key="frame" x="80" y="162" width="30" height="17"/>
                             <color key="backgroundColor" red="1" green="0.2317811021" blue="0.34086484360000002" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-zI-yLz">
-                            <rect key="frame" x="215" y="173" width="30" height="17"/>
+                            <rect key="frame" x="215" y="162" width="30" height="17"/>
                             <color key="backgroundColor" red="1" green="0.2317811021" blue="0.34086484360000002" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-WE-rsM" userLabel="container_1">
-                            <rect key="frame" x="0.0" y="180" width="304" height="240"/>
+                            <rect key="frame" x="0.0" y="169" width="304" height="240"/>
                             <subviews>
                                 <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35" userLabel="erase" customClass="IButton">
                                     <rect key="frame" x="255" y="15" width="42" height="37"/>
@@ -406,7 +399,7 @@
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="109" userLabel="input">
                                     <rect key="frame" x="86" y="16" width="160" height="33"/>
-                                    <color key="backgroundColor" red="0.88085007680000005" green="0.88349897710000003" blue="0.90807574729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="61" userLabel="input value">
                                     <rect key="frame" x="94" y="15" width="145" height="36"/>
@@ -421,23 +414,24 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="420" id="XTH-XS-kHO"/>
+                        <constraint firstAttribute="height" constant="409" id="XTH-XS-kHO"/>
                         <constraint firstAttribute="width" constant="304" id="e8d-fo-4Mq"/>
                     </constraints>
                 </view>
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7n-Wd-ZnJ">
-                    <rect key="frame" x="28" y="609" width="320" height="50"/>
+                    <rect key="frame" x="28" y="520" width="320" height="50"/>
                 </adBannerView>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="3hr-ql-eat" secondAttribute="centerX" id="325-Vz-Otp"/>
-                <constraint firstAttribute="bottom" secondItem="K7n-Wd-ZnJ" secondAttribute="bottom" constant="8" id="3nD-Kx-CFb"/>
                 <constraint firstAttribute="centerX" secondItem="K7n-Wd-ZnJ" secondAttribute="centerX" id="8QH-9T-8PZ"/>
-                <constraint firstAttribute="centerY" secondItem="3hr-ql-eat" secondAttribute="centerY" priority="750" constant="27" id="Tfm-Qx-go7"/>
+                <constraint firstAttribute="centerY" secondItem="3hr-ql-eat" secondAttribute="centerY" priority="750" constant="21" id="Tfm-Qx-go7"/>
+                <constraint firstItem="K7n-Wd-ZnJ" firstAttribute="top" secondItem="3hr-ql-eat" secondAttribute="bottom" constant="3" id="le7-0H-yk5"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="536.5" y="125.5"/>
         </view>
         <view opaque="NO" alpha="0.85000002384185791" tag="24" contentMode="scaleToFill" id="128" userLabel="who i am">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -491,7 +485,6 @@
     <resources>
         <image name="addTva.png" width="59" height="52"/>
         <image name="bkg3.png" width="286" height="191"/>
-        <image name="btnHT.png" width="103" height="103"/>
         <image name="btn_26.png" width="54" height="44"/>
         <image name="btn_27.png" width="55" height="44"/>
         <image name="btn_28.png" width="55" height="45"/>
@@ -508,6 +501,7 @@
         <image name="btn_39.png" width="55" height="46"/>
         <image name="btn_40.png" width="55" height="46"/>
         <image name="btn_41.png" width="55" height="46"/>
+        <image name="btn_RND.png" width="130" height="132"/>
         <image name="btnminus.png" width="65" height="67"/>
         <image name="erabtn.png" width="44" height="39"/>
         <image name="logoBig.png" width="78" height="57"/>
