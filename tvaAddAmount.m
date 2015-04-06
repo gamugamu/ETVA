@@ -41,7 +41,7 @@ static NSInteger newVat[2];
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 	if(pickerView.tag == PICKERCREATETVATAG){
 		newVat[component]	= row;
-		tvaAddedLabel.text	= [NSString stringWithFormat:@"%ld.%.2ld%%", newVat[0], (long)newVat[1]];
+		tvaAddedLabel.text	= [NSString stringWithFormat:@"%ld.%.2ld%%", (long)newVat[0], (long)newVat[1]];
 	}
 	
 	else
@@ -164,7 +164,7 @@ static NSInteger newVat[2];
 	newVat[0]				= 0;
 	newVat[1]				= 0;
 	tvacurrentLabel.text	= [NSString stringWithFormat:@"%@%%", [[addedAmount _tvaList] objectAtIndex: 0]];
-	tvaAddedLabel.text		= [NSString stringWithFormat:@"%2ld.%.2ld%%",(long)newVat[0], newVat[1]];;
+	tvaAddedLabel.text		= [NSString stringWithFormat:@"%2ld.%.2ld%%",(long)newVat[0], (long)newVat[1]];;
 }
 
 #pragma mark alloc/dealloc

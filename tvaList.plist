@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<real>5.5</real>
 	<integer>20</integer>
-	<integer>7</integer>
+	<integer>10</integer>
+	<real>5.5</real>
 	<real>2.1</real>
 </array>
 </plist>
