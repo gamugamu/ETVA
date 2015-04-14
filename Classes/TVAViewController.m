@@ -75,11 +75,32 @@
     return YES;
 }
 
+#pragma mark - display
+
+- (void)performBlinkForElement:(UIView*)view
+                       iterate:(uint)count
+                 numberOfBlink:(uint)nbOfCount{
+    count++;
+    
+    [UIView animateWithDuration: .2f
+                     animations: ^{
+                         view.alpha = (uint)(1 + view.alpha) % 2;
+                         NSLog(@"alpha %f %@", view.alpha, view);
+                    }completion: ^(BOOL finished){
+                        
+                         if(count < nbOfCount)
+                             [self performBlinkForElement: view
+                                                  iterate: count
+                                            numberOfBlink: nbOfCount];
+                     }];
+}
+
 #pragma mark buttons action
 
 -(IBAction)tvaPressed:(id)sender{
-	_tvaLogic.ttc				= !_tvaLogic.ttc;	
-	[_buttonTVA setSelected:	  ![_buttonTVA isSelected]];
+	_tvaLogic.ttc = !_tvaLogic.ttc;
+    
+    [_buttonTVA setSelected: ![_buttonTVA isSelected]];
 	[self displayCompositeTVA];
 }
 
@@ -109,8 +130,8 @@
 - (void)popUpAndAppear:(UIView*)popView{
 	[self.view addSubview: popView];
 	popView.alpha = 0;
-	[UIView animateWithDuration:.5f 
-					 animations:^{popView.alpha = 1;}];
+	[UIView animateWithDuration: .5f
+					 animations: ^{popView.alpha = 1;}];
 }
 
 #pragma mark display Logic
@@ -122,17 +143,23 @@
 	NSUInteger current = _tvaAmount.lastSelection;
 	[_picker	selectRow:current  inComponent:0 animated:YES];
 	[_tvaAmount TVAAmountHaschanged: current];
-	[self		displaySwitchedTVA];
-	[self		displayCompositeTVA];
+    
+	[self displaySwitchedTVA];
+	[self displayCompositeTVA];
+    [self performBlinkForElement: _buttonTVA
+                         iterate: 0
+                   numberOfBlink: 12];
 }
 
 - (void)viewDidLoad {
-	_tvaLogic								= [[TVALogic alloc] initWithTVA: _tvaAmount = [[TVAAmount alloc] init]];
-	[[NSNotificationCenter defaultCenter]	addObserver:self selector:@selector(getName:) name:IBUTTONNAME object:nil];
-	[self									decorateText];
-	
-	//if([FirstTime isFirstTime])				[self.view	addSubview: [_helpViewManager display]];
-    [super									viewDidLoad];
+	_tvaLogic = [[TVALogic alloc] initWithTVA: _tvaAmount = [[TVAAmount alloc] init]];
+    
+	[[NSNotificationCenter defaultCenter]	addObserver: self
+                                               selector: @selector(getName:)
+                                                   name: IBUTTONNAME
+                                                 object: nil];
+	[self decorateText];
+    [super viewDidLoad];
 }
 
 #define POINTFORMAT @"."
