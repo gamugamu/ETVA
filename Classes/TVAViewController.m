@@ -85,7 +85,6 @@
     [UIView animateWithDuration: .2f
                      animations: ^{
                          view.alpha = (uint)(1 + view.alpha) % 2;
-                         NSLog(@"alpha %f %@", view.alpha, view);
                     }completion: ^(BOOL finished){
                         
                          if(count < nbOfCount)
