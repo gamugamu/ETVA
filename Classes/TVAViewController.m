@@ -14,9 +14,10 @@
 #import "tvaAddAmount.h"
 #import "Colorize.h"
 #import "Preference.h"
-#include <math.h>
+#import <math.h>
+#import <iAd/iAd.h>
 
-@interface TVAViewController()
+@interface TVAViewController() <ADBannerViewDelegate>
 - (void)displayOutput;
 - (void)displayCompositeTVA;
 - (void)displaySwitchedTVA;
@@ -54,6 +55,25 @@
 #define BGDINFOTCT	62
 #define TAG_MINIHT	30
 #define TAG_MINITTC	31
+
+#pragma mark - bannerdelegate
+
+- (void)bannerViewWillLoadAd:(ADBannerView *)banner{
+    banner.hidden = YES;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    banner.hidden = NO;
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
+    banner.hidden = YES;
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner
+               willLeaveApplication:(BOOL)willLeave{
+    return YES;
+}
 
 #pragma mark buttons action
 

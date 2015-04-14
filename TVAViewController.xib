@@ -419,6 +419,14 @@
                 </view>
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7n-Wd-ZnJ">
                     <rect key="frame" x="28" y="520" width="320" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.95746568450000002" blue="0.095311398660000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="9fm-Vu-nFW"/>
+                        <constraint firstAttribute="height" constant="50" id="gRu-n6-6Vb"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="m2H-0e-I8X"/>
+                    </connections>
                 </adBannerView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -427,6 +435,7 @@
                 <constraint firstAttribute="centerX" secondItem="K7n-Wd-ZnJ" secondAttribute="centerX" id="8QH-9T-8PZ"/>
                 <constraint firstAttribute="centerY" secondItem="3hr-ql-eat" secondAttribute="centerY" priority="750" constant="21" id="Tfm-Qx-go7"/>
                 <constraint firstItem="K7n-Wd-ZnJ" firstAttribute="top" secondItem="3hr-ql-eat" secondAttribute="bottom" constant="3" id="le7-0H-yk5"/>
+                <constraint firstAttribute="centerY" secondItem="K7n-Wd-ZnJ" secondAttribute="centerY" constant="-211.5" id="vC0-xC-lFR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
